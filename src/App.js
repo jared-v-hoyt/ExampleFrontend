@@ -43,7 +43,8 @@ export default function App() {
 					parse_product_list(result);
 					is_loading_handler(false);
 				})
-				.catch((error) => console.log("error", error));
+				.catch((error) => console.log("error", error))
+				.finally(is_loading_handler(false));
 		}, 2000);
 	}
 
