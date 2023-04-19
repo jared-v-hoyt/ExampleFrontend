@@ -3,7 +3,7 @@ import { Box, Button, CircularProgress } from "@mui/material";
 import "./App.css";
 
 export default function App() {
-	const [product_list, set_product_list] = useState(null);
+	const [product_list, set_product_list] = useState([]);
 	const product_list_handler = (list) => set_product_list(list);
 
 	const [disabled_buttons, set_disabled_buttons] = useState([
