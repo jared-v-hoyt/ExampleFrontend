@@ -33,9 +33,9 @@ export default function App() {
 				.then((response) => response.json())
 				.then((result) => {
 					let list = [];
-					result.forEach((product) =>
-						list.push(<tr>{product.productName}</tr>)
-					);
+					result.forEach((product) => {
+						list.push(<tr>{product.productName}</tr>);
+					});
 					product_list_handler(list);
 				})
 				.catch((error) => console.log("error", error))
