@@ -39,10 +39,7 @@ export default function App() {
 
 			fetch("http://localhost:5134/products", request_options)
 				.then((response) => response.json())
-				.then((result) => {
-					parse_product_list(result);
-					is_loading_handler(false);
-				})
+				.then((result) => parse_product_list(result))
 				.catch((error) => console.log("error", error))
 				.finally(is_loading_handler(false));
 		}, 2000);
